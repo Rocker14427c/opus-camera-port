@@ -1,27 +1,27 @@
 #!/sbin/sh
-# OPLUS Camera Port - customize.sh for KernelSU/Magisk
+# OPLUS Camera Port v1.1 - installer
+
 ui_print ""
-ui_print "📷 OPLUS Camera Port v1.0"
-ui_print "===================================="
+ui_print "📷 OPLUS Camera Port v1.1"
+ui_print "============================"
 ui_print "realme Narzo 50A (RMX3430)"
-ui_print "Stock RUI4 Camera for AOSP ROMs"
+ui_print "Safe version - no bootloop risk"
 ui_print ""
 
-# Architecture check
-ARCH=$(getprop ro.product.cpu.abi)
-ui_print "Architecture: $ARCH"
-[ "$ARCH" != "arm64-v8a" ] && ui_print "⚠️ Warning: Expected arm64-v8a"
-
-# Check for the APK (reassembled or not)
 APK_FILE="$MODPATH/system/priv-app/OplusCamera/OplusCamera.apk"
-if [ ! -f "$APK_FILE" ]; then
-    ui_print "⚠️ OplusCamera.apk not found!"
-    ui_print "   Run: cat OplusCamera.apk.part0* > OplusCamera.apk"
-    ui_print "   Then re-zip and flash"
+if [ -f "$APK_FILE" ]; then
+    APK_SIZE=$(stat -c%s "$APK_FILE" 2>/dev/null || echo 0)
+    ui_print "📦 OplusCamera.apk: $APK_SIZE bytes"
+    if [ "$APK_SIZE" -lt 100000000 ] 2>/dev/null; then
+        ui_print "⚠️  APK seems too small! May not work."
+    fi
+else
+    ui_print "❌ OplusCamera.apk MISSING!"
 fi
 
 ui_print ""
-ui_print "✅ Flash complete! Reboot to apply."
-ui_print "   If camera crashes, check vendor blobs:"
-ui_print "   https://github.com/Rocker14427c/opus-camera-port#readme"
+ui_print "✅ Flash complete! Reboot."
+ui_print "   If camera still doesn't work, check:"
+ui_print "   settings → apps → show system → OPLUS Camera"
+ui_print "   → grant all permissions → clear cache"
 ui_print ""
