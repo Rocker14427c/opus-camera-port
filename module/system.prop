@@ -1,3 +1,8 @@
-# OPLUS Camera Port - properties (Magisk system.prop / KernelSU fallback)
+# OPLUS Camera Port - system props (KernelSU/Magisk)
+# These load before post-fs-data.sh
 ro.camera.hfr.enable=1
 ro.camera.sound.forced=0
+persist.camera.HAL3.enable=1
+persist.vendor.camera.HAL3.enable=1
+vendor.camera.hal1.packagelist=OplusCamera
+ro.oplus.camera.use_subsystem=1
