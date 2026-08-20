@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OPLUS Camera Port: oplus-support-wrapper.jar (hidden-API wrapper classes
+     used by the stock camera) exposed as a shared library. -->
+<permissions>
+    <library name="com.oplus.support-wrapper"
+        file="/system/framework/oplus-support-wrapper.jar" />
+</permissions>

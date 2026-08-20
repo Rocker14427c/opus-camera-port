@@ -1,0 +1,6 @@
+id=opus_camera_port
+name=OPLUS Camera Port (Narzo 50A RUI4)
+version=v1.0
+versionCode=1
+author=Rocker14427c
+description=Port of the realme Narzo 50A (RMX3430) stock camera - OplusCamera 3.116.1 from Realme UI 4.0 / ColorOS 13.0.1 (Android 13) - for AOSP-based custom ROMs. Installs the full OPlus camera app, oplus-framework shared libraries, OPlus framework resources and camera feature native libs, systemlessly. Requirements: Android 13+, arm64, KernelSU or Magisk. Test target: AxionOS 2.7 (Android 16).

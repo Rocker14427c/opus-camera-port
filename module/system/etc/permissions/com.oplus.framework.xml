@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OPLUS Camera Port: exposes oplus-framework.jar as a shared library so the
+     stock camera (com.oplus.camera) can resolve com.oplus.* framework classes
+     on AOSP ROMs. On stock Realme UI these jars live on the boot classpath;
+     the <library> mechanism below is the AOSP-compatible equivalent. -->
+<permissions>
+    <library name="com.oplus.framework"
+        file="/system/framework/oplus-framework.jar" />
+</permissions>

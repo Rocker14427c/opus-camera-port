@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OPLUS Camera Port: hidden API exemptions for the stock camera app.
+     Mirrors the stock RUI4 entry in /system/etc/sysconfig/hiddenapi-package-whitelist.xml
+     (com.oplus.camera is whitelisted on stock). -->
+<config>
+    <hidden-api-whitelisted-app package="com.oplus.camera" />
+</config>

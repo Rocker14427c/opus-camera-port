@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OPLUS Camera Port: OPlus camera unit SDK shared libraries.
+     Original stock XML pointed to /product/framework/; paths adapted to
+     /system/framework/ for systemless module installation. -->
+<permissions>
+    <library name="com.oplus.camera.unit.sdk"
+        file="/system/framework/com.oplus.camera.unit.sdk.jar" />
+    <library name="com.oppo.camera.unit.sdk"
+        file="/system/framework/com.oplus.camera.unit.sdk.jar" />
+    <library name="com.oplus.camera.unit.sdk.adapter"
+        file="/system/framework/com.oplus.camera.unit.sdk.adapter.jar" />
+</permissions>

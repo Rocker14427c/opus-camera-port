@@ -1,0 +1,3 @@
+# OPLUS Camera Port - properties (Magisk system.prop / KernelSU fallback)
+ro.camera.hfr.enable=1
+ro.camera.sound.forced=0

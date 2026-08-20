@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OPLUS Camera Port: privileged permissions for com.oplus.camera.
+     The APK shipped in this module is re-signed with the AOSP test platform
+     key, so on ROMs signed with test keys (most unofficial builds, including
+     unofficial AxionOS/LineageOS) these permissions are granted normally. -->
+<permissions>
+    <privapp-permissions package="com.oplus.camera">
+        <permission name="android.permission.SYSTEM_CAMERA" />
+        <permission name="android.permission.MANAGE_APP_OPS_MODES" />
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.WRITE_SETTINGS" />
+        <permission name="android.permission.DEVICE_POWER" />
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    </privapp-permissions>
+</permissions>
